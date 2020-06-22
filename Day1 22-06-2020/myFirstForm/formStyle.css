@@ -1,4 +1,5 @@
+
 label{
     display:inline-block;
-    width:200px;
+    width:200px;/*only width wont work ,as label ny default is block element so display is important here*/
 }
