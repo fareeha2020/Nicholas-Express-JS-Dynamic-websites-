@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' type='text/css' href='formStyle.css'/>
+</head>
+<body>
+    <form action='thankyou.html'>
+        <label> First Name</label>
+        <input type='text'/>
+        <br>
+        <label>Select  ur Fav Car:(one)</label>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+          <br>
+          <label>Enter a message</label>
+          <textarea name="message" rows="10" cols="30">
+            The cat was playing in the garden.
+            </textarea>
+            <br>
+            <label>Select  ur Fav Car:(multiple)</label>
+            <select name="cars" size="4" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+              </select>
+              <br>
+              <label>Enter a message</label>
+            <textarea name="message" style="width:200px; height:600px;">
+                The cat was playing in the garden.
+                </textarea>
+                <br>
+                <label>Click this button</label>
+                <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+        <input type='submit' value='send'/>
+    </form>
+</body>
+</html>
