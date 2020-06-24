@@ -16,17 +16,7 @@ app.get('/about', function (req, res) {
     //if browser req this page http://localhost:3000/about above  responsevwill display 
 });
 
-app.get('/about', function (req, res) {
-    res.send('<h1>This is the about us page!</h1>');
-});//http://localhost:3000/about
 
-app.get('/print', function (req, res) {
-    /*print http://localhost:3000/print?message=Hello
- outputs on  browser page 'your message was Hello'*/
-    let message = req.query.message;
-    res.send('<h1>Your message was: ' + message + '</h1>');
-});
-// /numbers printing on webpage  http://localhost:3000/numbers?start=10&stop=15
 app.get('/numbers', function (req, res) {
     /* SAME CAN BE USED ,create numbers-form.html
 In form action='/number' does same thing numbers printing on webpage using input from form  http://localhost:3000/numbers-form.html*/
@@ -46,20 +36,7 @@ In form action='/number' does same thing numbers printing on webpage using input
         numbers:numbers
     });
 });
-//GET method ,forms will be GET:carries request parameter appended in URL string
-//when they submit the form it will be POST:carries request parameter appended in message body(moreSecure)
-app.get("/students/register", function (req, res) {
-    /*this is app.get for GET request in FORM method="GET" 
-    url is like http://localhost:3000/students/register?firstName=s&lastName=k&dob=0019-02-02&interest=Web*/
-    res.send(req.query);//query string is with GET so like '.query' to access it.req.query will sidplay form data as it is
-    //  let html = '<dl>';//determine description of each fields and send all back on website
-    // html += '<dt>First nam is </dt><dd>' + req.query.firstName + '</dd>';
-    // html += '<dt>Last nam is </dt><dd>' + req.query.lastName + '</dd>';
-    // html += '<dt>DOB is </dt><dd>' + req.query.dob + '</dd>';
-    // html += '<dt>Interested in </dt><dd>' + req.query.interest + '</dd>';
-    // html += '</dl>';
-    // res.send(html);
-});
+
 
 app.post("/students/register", function (req, res) {
     //here we are creating object of data we collect from FORM
