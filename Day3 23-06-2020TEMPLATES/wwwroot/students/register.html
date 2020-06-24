@@ -1,0 +1,25 @@
+<form action="/students/register" method="POST">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" />
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" />
+    </div>
+    <div>
+      <label for="dob">Date Of Birth:</label>
+      <input type="date" id="dob" name="dob" />
+    </div>
+    <div>
+       <label for="interest">Area of Interest:</label>
+       <select id="interest" name="interest">
+         <option disabled>Please select an area of interest...</option>
+         <option>Networking</option>
+         <option>Web</option>
+         <option>Programming</option>
+         <option>Cyber Security</option>
+       </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>

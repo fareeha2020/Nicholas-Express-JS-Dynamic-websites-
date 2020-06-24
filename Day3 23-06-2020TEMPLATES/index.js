@@ -1,5 +1,6 @@
 const express = require('express');//npm install express --save
 const bodyParser = require('body-parser');// npm install body-parser --save
+const { request } = require('express');
 const app = express();
 app.set('views','./views')//in what folder to find our templates
 app.set('view engine','hbs')//tell express JS which remplate to use.THis is handle bar 
@@ -31,12 +32,19 @@ app.get('/numbers', function (req, res) {
 In form action='/number' does same thing numbers printing on webpage using input from form  http://localhost:3000/numbers-form.html*/
     let start = parseInt(req.query.start);
     let stop = parseInt(req.query.stop);
-    let html = '<ul>';
+    let numbers=[];
+   
     for (let i = start; i < stop; i++) {
-        html += '<li>' + i + '</li>';
+        numbers.push(i);
     }
-    html += '</ul>';
-    res.send(html);
+  //http://localhost:3000/numbers-form.html enter start number and stop number ,submit will call this GET method
+  //now for each time in a template we wrote code to display as list in numbers.hbs
+  //what is going to render is determined by data send (in this example start,stop)
+  //sending whole array to our .hbs
+  //remenber render always refere just file name without extension as numbers not numbers.hbs
+    res.render('numbers',{
+        numbers:numbers
+    });
 });
 //GET method ,forms will be GET:carries request parameter appended in URL string
 //when they submit the form it will be POST:carries request parameter appended in message body(moreSecure)
@@ -54,19 +62,17 @@ app.get("/students/register", function (req, res) {
 });
 
 app.post("/students/register", function (req, res) {
-    /*this is app.get for POST request in FORM method="POST"
-    link generated is like 'http://localhost:3000/students/register/ so all request is in body(check f12 network,response)*/
-    
-    res.send(req.body);//displays as it is as JSON Object
-
-    // let html = '<dl>';//determine description of each fields and send all back on website
-    // html += '<dt>First nam is</dt><dd>' + req.body.firstName + '</dd>';
-    // html += '<dt>Last  name is</dt><dd>' + req.body.lastName + '</dd>';
-    // html += '<dt>DOB is </dt><dd>' + req.body.dob + '</dd>';
-    // html += '<dt>Interested in </dt><dd>' + req.body.interest + '</dd>';
-    // html += '</dl>';
-    // res.send(html);
-    
+    //here we are creating object of data we collect from FORM
+   let student1={
+       firstName:req.body.firstName,
+       lastName:req.body.lastName,
+       dob:req.body.dob,
+       interest:req.body.interest,
+   }
+    //now render this using thisis the TEMPLATE I WANT TO RENDER,THIS IS THE DATA IAM GIVING
+   res.render('student-details',{
+       student:student1
+   })
 });
 
 //app.listen should be always at the bottom
