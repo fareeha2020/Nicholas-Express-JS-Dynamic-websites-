@@ -1,0 +1,14 @@
+/* Uses a descendent selector with a class selector on the form */
+form.green label {
+    color: forestgreen;
+}
+
+/* Uses a descendent selector with a class selector on the form */
+form.blue label {
+    color: blue;
+}
+
+/* Use a descendent selector */
+form label {
+    color: crimson;
+}

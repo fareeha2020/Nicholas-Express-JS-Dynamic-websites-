@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudentLIST</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Student List</h1>
+    <a href='/students/register.html'>Want to Register a Student</a>
+    <table>
+       <thead>
+           <tr>
+               <th>FULL NAME</th>
+               <th>DATE OF BIRTH</th>
+               <th>INTERESTD</th>
+           </tr>
+       </thead>
+       <tbody>
+           {{#each studentsFromGet}}
+           <tr>
+               <td>{{this.firstName}}{{this.lastName}}</td>
+               <td>{{this.dob}}</td>
+               <td>{{this.interest}}</td>
+           </tr>
+           {{/each}}
+       </tbody>
+    </table>
+    
+        {{!-- <dt>First Name</dt>
+        <dd>{{ student.firstName }}</dd>
+        <dt>Last Name</dt>
+        <dd>{{ student.lastName }}</dd>
+        <dt>Date Of Birth</dt>
+        <dd>{{ student.dob }}</dd>
+        <dt>Interest</dt>
+        <dd>{{ student.interest }}</dd>
+    </dl> --}}
+</body>
+
+</html>

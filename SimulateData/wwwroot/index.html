@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Page</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        nav li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+        </ul>
+    </nav>
+    <h1>Hello World!</h1>
+    
+    <form id="sample-form">
+        <div>
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="msg" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script type="text/javascript">
+        (function () {
+            var form = document.getElementById('sample-form');
+
+            form.addEventListener('submit', function (foo) {
+                alert('Hit submit event for form!');
+
+                let numOfInputs = form.elements.length;
+                alert('The number of inputs is: ' + numOfInputs);
+                let message = form.elements["msg"].value;
+                alert('The message is: ' + message);
+
+                foo.preventDefault();
+
+                // return false;
+            });
+        })();
+    </script>
+</body>
+
+</html>
