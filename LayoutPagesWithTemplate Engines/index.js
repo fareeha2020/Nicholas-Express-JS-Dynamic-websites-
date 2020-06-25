@@ -65,8 +65,8 @@ app.get('/students', function(req, res) {
  GET /students/details/?id=1*/
 {/* <a href="/students/details/{{ this.id }}">Details</a>
 creating to GET this on details so below  will get called*/}
-app.get('/students/details/:id', function(req, res) {
-    const id = parseInt(req.params.id);
+app.get('/students/details/:idIsVariableName', function(req, res) {
+    const id = parseInt(req.params.idIsVariableName);
     const result = studentRepo.getStudentById(id);
     res.render('student-details', {
         title: 'Student Details',
