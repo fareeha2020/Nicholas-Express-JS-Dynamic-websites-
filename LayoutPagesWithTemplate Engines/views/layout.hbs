@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <h1> This Layout page is is default run by template engine first WHATEVER HERE WILL BE SAME EXCEPT JUST WHEREEVER HERE THERE IS  triple curly braces body is replaced by each link route's CONTENT IT CALLS  it calls</h1>
+    <p>SO LAYOUT .HBS KEEPS REPEATING </p>
+    <p>examples: http://localhost:3000/students/register has this page and STUDENT REGISTRATION FORM PAGE AS ITS BODY</p>
+   <p> example : http://localhost:3000/students/ has this Layouts Contents and STUDENT LISTS PAGE AS ITS BODY</p>
+   
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+        </ul>
+    </nav>
+    {{{body}}}
+</body>
+
+</html>

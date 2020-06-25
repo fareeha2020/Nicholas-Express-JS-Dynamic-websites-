@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Page</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        nav li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+        </ul>
+    </nav>
+    <h1>Hello World!</h1>
+    <label>This is another label!</label>
+    <form class="blue">
+        <div>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" />
+        </div>
+        <div>
+            <input type="checkbox" id="remember" name="remember" value="true" />
+            <label>Remember Me:</label>
+        </div>
+        <fieldset>
+            <legend>What is your favorite meal?</legend>
+            <div>
+                <label for="soup">Soup</label>
+                <input type="radio" id="soup" name="meal" value="soup">
+            </div>
+            <div>
+                <label for="curry">Curry</label>
+                <input type="radio" id="curry" name="meal" value="curry">
+            </div>
+            <div>
+                <label for="pizza">Pizza</label>
+                <input type="radio" id="pizza" name="meal" value="pizza">
+            </div>
+        </fieldset>
+        <div>
+            <label>Fruit:</label>
+            <select id="simple" name="simple">
+                <option>Please select a fruit...</option>
+                <option value="bn">Banana</option>
+                <option value="chy">Cherry</option>
+                <option value="lmn">Lemon</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
