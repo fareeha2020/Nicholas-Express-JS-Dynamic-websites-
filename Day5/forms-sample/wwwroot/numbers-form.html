@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Page</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        nav li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+        </ul>
+    </nav>
+    <h1>Hello World!</h1>
+    
+    <form action="/numbers" method="GET">
+        <div>
+            <label for="start">Start Number:</label>
+            <input type="number" id="start" name="start" />
+        </div>
+        <div>
+            <label for="stop">Stop Number:</label>
+            <input type="number" id="stop" name="stop" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

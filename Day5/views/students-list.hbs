@@ -1,0 +1,27 @@
+<h1>Student List</h1>
+<a href="/students/register">Register Student</a>
+<table>
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Date Of Birth</th>
+            <th>Interest</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each students}}
+        <tr>
+            <td>{{ this.firstName }} {{ this.lastName }}</td>
+            <td>{{ this.dob }}</td>
+            <td>{{ this.interest }}</td>
+            <td>
+                <a href="/students/details/{{ this.id }}">Details</a>
+                <form action="/students/delete/{{ this.id }}" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

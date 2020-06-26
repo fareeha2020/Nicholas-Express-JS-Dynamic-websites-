@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task List</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        nav li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+        </ul>
+    </nav>
+    <h1>Task List</h1>
+    
+    <form id="task-form">
+        <div>
+            <label for="task">Task:</label>
+            <input type="text" id="task" name="task" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="task-list"></div>
+
+    </div>
+    <script type="text/javascript" src="/js/tasks.js"></script>
+</body>
+
+</html>
