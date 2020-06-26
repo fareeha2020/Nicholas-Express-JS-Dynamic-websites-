@@ -1,0 +1,77 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: tomato;
+        }
+  .wrapper div {
+    flex: 1 1 150px;
+    border: 12px solid #ffa94d;
+    border-radius: 15px;
+    background-color: #ded0be;
+    padding: 20px;
+    color: #d9480f;
+    height:250px;
+  }
+body{
+    background-image: url(/images/ridlebg.jpg);
+    margin:auto;
+}
+h1{
+    background-image:url(/images/ridle.png);
+    width: fit-content;
+    margin: auto;
+    height: 103px; 
+}
+form{
+  font-size: medium;
+  display: inline;
+}
+label{
+  font-family: fantasy;
+    font-size: x-large;
+    color: black;
+    background-color: #ded0be;
+    text-shadow: 3px 3px 3px #fcfcfc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .flex-container{
+    /* We first create a flex layout context */
+    display: flex;
+/*      * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-direction: row;
+       /* Then we define how is distributed the remaining space */
+      justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.riddle-content{
+   background: tomato;
+   padding: 5px;
+   width: 200px;
+   height: 150px;
+   margin-top: 10px;
+   line-height: 150px;
+   color: white;
+   font-weight: bold;
+   font-size: 3em;
+   text-align: center;
+}

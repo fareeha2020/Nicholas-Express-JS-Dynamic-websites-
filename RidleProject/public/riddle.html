@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="riddle.css">
+    <title>Riddles</title>
+</head>
+
+<body>
+    <header>
+        <h1>Can You Solve Them?</h1>
+    </header>
+    <div>
+        <form action="/riddles" target="_blank" method='POST'>
+            <label for="riddlesLevel">Choose a Level</label>
+            <select name="riddlesLevel" id="riddles-type">
+                <option value="Easy">Easy Riddles</option>
+                <option value="Hard">Hard Riddles</option>
+            </select>
+            <label for="riddlesNumber">Choose an Option</label>
+            <select name="riddlesNumber" id="riddles-number">
+                <option value="Four">4</option>
+                <option value="Eight">8</option>
+            </select>
+            <input name='submit' type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        <div id='wrap-1' class="wrapper">
+            <div id="1" class="riddles-container">
+                <span class="riddle-question">What gets wet when drying?</span>
+                <span class="riddle-hover" style="display:none"><img src='/images/1.jpg'>Keep thinking!!</span>
+                <span class="riddle-answer" style="display:none"> Towel</span>
+            </div>
+            <div id="2" class="riddles-container">
+                <span class="riddle-question">I am full of holes;I can hold water.What am i?</span>
+                <span class="riddle-hover" style="display:none"><img src='/images/2.jpg'>Keep thinking</span>
+                <span class="riddle-answer" style="display:none">Sponge</span>
+            </div>
+            <div id="3" class="riddles-container">
+                <span class="riddle-question">What are two things people never eat before breakfast?</span>
+                <span class="riddle-hover" style="display:none"><img src='/images/3.jpg'>Keep thinking</span>
+                <span class="riddle-answer" style="display:none">Lunch and dinner</span>
+            </div>
+            <div id="4" class="riddles-container">
+                <span class="riddle-question">What has two hands and a face,but no arms and legs?</span>
+                <span class="riddle-hover" style="display:none"><img src='/images/1.jpg'>Keep thinking</span>
+                <span class="riddle-answer" style="display:none">Clock</span>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="5" class="riddles-container">
+                <span class="riddle-question">What has many Keys but can't open any doors?</span>
+                <span class="riddle-hover" style="display:none"><img src='/images/5.png'>Keep thinking</span>
+                <span class="riddle-answer" style="display:none">Piano</span>
+            </div>
+            <div id="6" class="riddles-container">
+                <span class="riddle-question">You may enter,but you may not come in,I have space but no room,I have keys
+                    but open no lock.What Am i?</span>
+                <span class="riddle-hover" style="display:none"><img src='/images/6.jpg'>Keep thinking</span>
+                <span class="riddle-answer" style="display:none">Computer</span>
+            </div>
+            <div id="7" class="riddles-container">
+                <span class="riddle-question">When it is alive we sing,when it is dead we clap our hands.What is
+                    it?</span>
+                <span class="riddle-hover" style="display:none"><img src='/images/7.jpg'>Keep thinking</span>
+                <span class="riddle-answer" style="display:none">BirthdayCandle</span>
+            </div>
+            <div id="8" class="riddles-container">
+                <span class="riddle-question">I’m tall when I’m young, and I’m short when I’m old. What am I?</span>
+                <span class="riddle-hover" style="display:none"> <img src='/images/3.jpg'>Keep thinking</span>
+                <span class="riddle-answer" style="display:none">Candle</span>
+            </div>
+        </div>
+        <script rel="text/javascript" src="riddle.js"></script>
+</body>
+
+</html>
